@@ -72,7 +72,7 @@ class Help(commands.Cog):
             inline=True
         )
         em.add_field(
-            name="**Evento:**",
+            name="**Avisos:**",
             value="""
                 *pet.aviso*
                 *pet.aviso_atual*
