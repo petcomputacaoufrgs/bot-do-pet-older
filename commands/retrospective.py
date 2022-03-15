@@ -76,7 +76,7 @@ class Retrospective(commands.Cog):
         global retro_day
         now = datetime.datetime.now(pytz.timezone('Brazil/East'))
         if retro_day == datetime.date.today() + datetime.timedelta(days=1):
-            if now.hour == 13:
+            if now.hour == 15:
                 self.remember_retrospective.start()
         if retro_day == datetime.date.today():
             if now.hour == 23:
