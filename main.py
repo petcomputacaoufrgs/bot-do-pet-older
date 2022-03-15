@@ -31,5 +31,5 @@ def load_cogs(bot):
 load_cogs(bot_prefix)
 
 
-TOKEN = config("TOKEN")
+TOKEN = config("OFFICIAL_TOKEN")
 bot_prefix.run(TOKEN)
