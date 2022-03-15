@@ -87,7 +87,7 @@ class Interpet(commands.Cog):
     @tasks.loop(count=1)
     async def remember_interpet(self):
         global interpet_day
-        channel = self.bot.get_channel(INTERPET_CHANNEL)
+        channel = self.bot.get_channel(int(INTERPET_CHANNEL))
         await channel.send(f'atenção, {PETIANES}!\nlembrando que amanhã é dia de interpet, estejam acordados amanhã de manhã!')         
 
     # Task: set the interpet day to 1 month later
@@ -95,7 +95,7 @@ class Interpet(commands.Cog):
     async def update_interpet_day(self):
         global interpet_day
         interpet_day += relativedelta(months=1)
-        channel = self.bot.get_channel(INTERPET_CHANNEL)
+        channel = self.bot.get_channel(int(INTERPET_CHANNEL))
         await channel.purge(limit=1)
 
 

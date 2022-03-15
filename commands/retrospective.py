@@ -94,7 +94,7 @@ class Retrospective(commands.Cog):
     async def update_retro_day(self):
         global retro_day
         retro_day += datetime.timedelta(days=14)
-        channel = self.bot.get_channel(RETRO_CHANNEL)
+        channel = self.bot.get_channel(int(RETRO_CHANNEL))
         await channel.purge(limit=1)
 
 

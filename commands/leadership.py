@@ -62,7 +62,7 @@ class Leadership(commands.Cog):
 
     @tasks.loop(count=1)
     async def disclose_leadership(self):
-        channel = self.bot.get_channel(LEADERSHIP_CHANNEL)
+        channel = self.bot.get_channel(int(LEADERSHIP_CHANNEL))
         data = utils.read_file("data.leadership.json")
         leadership = data[f'{datetime.date.today().month}']
         await channel.send(f'atenção, {PETIANES}!\nesse mês nosso ditador e vice ditador passam a ser {leadership[0]} e {leadership[1]}')
