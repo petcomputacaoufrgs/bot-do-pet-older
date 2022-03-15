@@ -16,7 +16,7 @@ class Help(commands.Cog):
     async def help(self, ctx):
         em = discord.Embed(
             title="**Bem-vinde ao Bot do PET!**",
-            url="https://github.com/petcomputacaoufrgs/bot-do-pet",
+            url="https://github.com/petcomputacaoufrgs/botdopet",
             description="Use `pet.help <comando>` para ter mais informações sobre seu uso.",
             color=0xFFFFFF
         )

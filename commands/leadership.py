@@ -42,7 +42,7 @@ class Leadership(commands.Cog):
         current_leadership = leadership[f'{current_month}']
         em = discord.Embed(
             title=f"**Liderança:**",
-            description=f"Neste mês de {months_names[f'{current_month}'].lower()}, o líder é **{current_leadership[0]}** e o vice é **{current_leadership[1]}**.\n\nNos próximos meses, serão líderes:\n⠀",
+            description=f"Neste mês de {months_names[f'{current_month}'].lower()}, o líder é **{current_leadership[0]}** e o vice é **{current_leadership[1]}**.\n\nPara os próximos meses:",
             color=0xFDFD96
         )
         for month in leadership:
@@ -51,7 +51,7 @@ class Leadership(commands.Cog):
                 em.add_field(
                     name=f"**{months_names[month]}**",
                     value=f"Líder: {next_leadership[0]}\nVice: {next_leadership[1]}",
-                    inline=True
+                    inline=False
                 )
         await ctx.reply(embed = em)
 
