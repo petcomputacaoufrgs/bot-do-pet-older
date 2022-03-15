@@ -1,0 +1,5 @@
+discord.py
+python-decouple
+pytz
+python-dateutil
+Unidecode
