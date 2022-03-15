@@ -86,7 +86,7 @@ class Retrospective(commands.Cog):
     @tasks.loop(count=1)
     async def remember_retrospective(self):
         global RETRO_CHANNEL
-        channel = self.bot.get_channel(RETRO_CHANNEL)
+        channel = self.bot.get_channel(int(RETRO_CHANNEL))
         await channel.send(f'atenção, {PETIANES}!\nlembrando que amanhã é dia de retrospectiva, já aproveitem pra escrever o textos de vocês.')
 
     # Task: set the retrospective day to 2 weeks later
