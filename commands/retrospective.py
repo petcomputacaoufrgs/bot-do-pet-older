@@ -85,6 +85,7 @@ class Retrospective(commands.Cog):
     # Task: send the warning to every petiane
     @tasks.loop(count=1)
     async def remember_retrospective(self):
+        global RETRO_CHANNEL
         channel = self.bot.get_channel(RETRO_CHANNEL)
         await channel.send(f'atenção, {PETIANES}!\nlembrando que amanhã é dia de retrospectiva, já aproveitem pra escrever o textos de vocês.')
 
