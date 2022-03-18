@@ -77,7 +77,7 @@ class Interpet(commands.Cog):
         global interpet_day
         now = datetime.datetime.now(pytz.timezone('Brazil/East'))
         if interpet_day == datetime.date.today() + datetime.timedelta(days=1):
-            if now.hour == 13:
+            if now.hour == 20:
                 self.remember_interpet.start()
         if interpet_day == datetime.date.today():
             if now.hour == 23:
